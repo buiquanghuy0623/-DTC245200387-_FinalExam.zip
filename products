@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS product_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE product_db;
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    quantity INT NOT NULL
+);
+
+-- Dữ liệu mẫu
+INSERT INTO products (name, price, quantity) VALUES 
+('Laptop Dell Inspiron', 15000000, 10),
+('Bàn phím cơ Logitech', 1200000, 25),
+('Chuột không dây', 350000, 50);
